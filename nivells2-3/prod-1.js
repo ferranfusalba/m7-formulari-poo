@@ -8,7 +8,7 @@ class Product {
     print() {
         let tr = document.createElement("tr");
         tr.innerHTML = `
-                    <th>${this.name}</th>
+                    <th class="${this.name}">${this.name}</th>
                     <th>${this.price}</th>
                     <th>${this.year}</th>
                     `;
@@ -21,6 +21,9 @@ class Product {
         thButton.className = "btn btn-sm btn-danger";
         thButton.textContent = "Delete";
         thButton.onclick = remProd;
+
+        let nomProd = this.name;
+        console.log(nomProd);
 
         document.getElementById("productList").appendChild(tr);
     }

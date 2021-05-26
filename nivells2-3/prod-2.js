@@ -38,8 +38,16 @@ function addProd(producte) {
 }
 
 function remProd(product) {
-    product.target.parentNode.parentNode.remove();
-    messageAlert("S'ha eliminat el producte correctament.", "alert alert-danger");
+    if (product.classList = "btn btn-sm btn-danger") {
+        for (let element in productsArray) {
+            if (productsArray[element].name === product.target.parentNode.parentNode.firstElementChild.className) {
+                productsArray.splice(element, 1);
+                product.target.parentNode.parentNode.remove();
+                messageAlert("S'ha eliminat el producte correctament.", "alert alert-danger");
+                console.log(productsArray);
+            }
+        }
+    }
 }
 
 function messageAlert(showMessage, showAlert) {
